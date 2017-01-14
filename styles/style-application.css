@@ -288,3 +288,17 @@ div#application-result div.result-stats table td span.points-caption {
 }
 
 
+@media (max-width: 800px) {
+    .one-program .program-content {
+        width: 100%;
+    }
+
+    .one-program {
+        background-color: rgba(255, 255, 255, 0.25);
+    }
+
+    .one-program .program-selector {
+        width: 100%;
+    }
+
+}
