@@ -2,6 +2,12 @@ var selectedProgramStep1;
 var selectedProgramsStep2 = [];
 var meritScore;
 
+var calculationCanvas;
+var canvasContext;
+
+var requestAnimationFrame;
+
+
 $(document).ready(function(){
     registerNavigationEvents();
     var firstPage = window.location.hash;
@@ -199,7 +205,7 @@ function enableBackButtons() {
             $('.application-step[data-step="' + (currentStep-1) + '"]').show();
             $('html, body').animate({ scrollTop: 0 }, 'fast');
         }
-        
+
         return false;
     });
 }
@@ -228,4 +234,54 @@ function updateSelections(){
         $('ul#selected-step3').append($('<li>-</li>'));
     }
 
+}
+
+function animateCalculation(){
+    calculationCanvas = document.getElementById("background-canvas");
+    canvasContext = backgroundCanvas.getContext("2d");
+
+    requestAnimationFrame = window.requestAnimationFrame ||
+        window.mozRequestAnimationFrame ||
+        window.webkitRequestAnimationFrame ||
+        window.msRequestAnimationFrame;
+
+    calculationCanvas.setAttribute("width", window.innerWidth);
+    calculationCanvas.setAttribute("height", 400);
+
+    drawAnimationFrame();
+}
+
+var loadingMaxWidth = 50;
+var loadingBoxes = [];
+
+function drawAnimationFrame() {
+
+
+
+    if(!stopAnimation){
+        requestAnimationFrame(drawAnimationFrame);
+    }
+
+}
+
+function calculateResults(){
+    var celebrationClass = "hidden";
+
+    var goodScore = (selectedProgramStep1.medianScore + selectedProgramStep1.minimumScore) / 2;
+    if(meritScore > selectedProgramStep1.medianScore){
+        celebrationClass = "awesome";
+    }else if(meritScore > goodScore){
+        celebrationClass = "good";
+    }else if(meritScore > selectedProgramStep1.minimumScore){
+        celebrationClass = "ok";
+    }
+
+    $('.result .celebratory-icon').removeClass("hidden").removeClass("awesome").removeClass("good").removeClass("ok").addClass(celebrationClass);
+
+    $('.bar.your-points').height(meritScore + "px");
+    $('.bar.your-points span.points').text(meritScore);
+    $('.bar.minimum-points').height(selectedProgramStep1.minimumScore + "px");
+    $('.bar.minimum-points span.points').text(selectedProgramStep1.minimumScore);
+    $('.bar.median-points').height(selectedProgramStep1.medianScore + "px");
+    $('.bar.median-points span.points').text(selectedProgramStep1.medianScore);
 }

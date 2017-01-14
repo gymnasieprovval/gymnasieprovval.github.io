@@ -150,6 +150,12 @@ header span {
     color: white;
 }
 
+.hero .hero-content .button-area a.button:after {
+    font-family: FontAwesome;
+    content: "\f061";
+    margin-left: 10px;
+}
+
 .hero .hero-content .button-area a.button.button-continue {
     background-color: limegreen;
     color: white;

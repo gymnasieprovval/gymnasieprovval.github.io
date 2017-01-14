@@ -218,10 +218,33 @@ div.application-sidebar.column .column-content ul.selections-summary li.value:be
     display: inline-block;
 }
 
+div#application-result div.result-overview {
+    width: 100%;
+    overflow: hidden;
+    vertical-align: middle;
+}
+
+div#application-result div.result-text-wrapper {
+    width: 50%;
+    float: left;
+    height: 200px;
+}
+
+div#application-result div.result-text {
+    width: 100%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: 200;
+    font-family: 'Roboto thin', sans-serif;
+}
+
 div#application-result div.celebratory-icon{
     height: 200px;
     text-align: center;
     line-height: 200px;
+    width:50%;
+    float: left;
 }
 div#application-result div.celebratory-icon:before {
     font-family: FontAwesome;
@@ -285,6 +308,12 @@ div#application-result div.result-stats table td span.points-caption {
     font-size: 0.55em;
     font-family: 'Roboto thin', sans-serif;
     font-weight: 200;
+}
+
+#calculation-canvas {
+    width: 100%;
+    height: 400px;
+    display: none;
 }
 
 

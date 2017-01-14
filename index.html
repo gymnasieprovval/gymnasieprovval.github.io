@@ -33,8 +33,8 @@
             sedan att få ett provbesked baserad på hur antagningen sett ut under förra ansökningsperioden.</span>
             </div>
             <div class="button-area">
-                <a class="nav button button-continue" href="#application">Gör ditt val!</a>
-                <a class="nav button button-read-more" href="#program">Läs mer ></a>
+                <a class="nav button button-continue" data-page-link="application" href="#application">Gör ditt val!</a>
+                <a class="nav button button-read-more" data-page-link="program" href="#program">Läs mer</a>
             </div>
         </div>
     </div>
@@ -136,18 +136,22 @@
         <!-- Steg 3 -->
         <div id="application-result" class="application-step" data-step="4">
             <div class="column-content">
-
+                <canvas id="calculation-canvas"></canvas>
                 <div class="result-wrapper">
                     <h2>Såhär ser det ut på dina program</h2>
                     <div class="result">
-                        <div class="celebratory-icon ok"></div>
-                        <div class="result-text">Du borde ha en bra chans att komma in på ditt förstahandsval, men se till att gå igenom dina andrahandsval också!</div>
-                        <div class="result-stats">
+                        <div class="result-overview">
+                            <div class="celebratory-icon ok"></div>
+                            <div class="result-text-wrapper">
+                                <div class="result-text">Du borde ha en bra chans att komma in på ditt förstahandsval, men se till att gå igenom dina andrahandsval också!</div>
+                            </div>
+                            </div>
+                         <div class="result-stats">
                             <table class="vertical-bars">
                                 <tr>
-                                    <td class="bar your-points" style="height: 140px;">140<span class="points-caption">Dina poäng</span></td>
-                                    <td class="bar minimum-points" style="height: 200px;">200<span class="points-caption">Antagningspoäng</span></td>
-                                    <td class="bar median-points" style="height: 300px;">300<span class="points-caption">Medianpoäng</span></td>
+                                    <td class="bar your-points" style="height: 140px;"><span class="points"></span><span class="points-caption">Dina poäng</span></td>
+                                    <td class="bar minimum-points" style="height: 200px;"><span class="points"></span><span class="points-caption">Antagningspoäng</span></td>
+                                    <td class="bar median-points" style="height: 300px;"><span class="points"></span><span class="points-caption">Medianpoäng</span></td>
                                 </tr>
                             </table>
 
