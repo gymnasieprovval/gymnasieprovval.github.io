@@ -1,0 +1,261 @@
+* {
+    font-family: 'Roboto', sans-serif;
+
+}
+
+h1 {
+    font-family: 'Roboto thin', sans-serif;
+    font-weight: 200;
+}
+
+h2 {
+    font-family: 'Roboto thin', sans-serif;
+    font-weight: 200;
+}
+
+h3 {
+    font-family: 'Roboto thin', sans-serif;
+    font-weight: 200;
+    margin: 0;
+    padding: 0;
+}
+
+i.fa-arrow-down {
+    font-size: 2em;
+    margin: 20px;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+
+    width: 100%;
+    //height: 70px;
+}
+
+header div.header-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+header nav ul {
+    list-style: none;
+    display: block;
+    text-align: center;
+    margin: 25px 0;
+    padding: 0;
+}
+header nav ul li {
+    display: inline;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    margin-right: 30px;
+}
+
+header nav ul li:last-child {
+    margin-right: 0;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+header nav ul li a.active {
+    font-weight: bold;
+    font-family: 'Roboto bold', sans-serif;
+}
+
+header img {
+    float: left;
+    width: 125px;
+    position: absolute;
+    top: 15px;
+}
+header span {
+    display: block;
+    float: left;
+    font-weight: bold;
+    font-family: 'Verdana', sans-serif;
+    font-size: 30px;
+}
+
+.hero {
+    /*background-color: deepskyblue;
+    background: #7abcff;
+    background: -moz-linear-gradient(top, #7abcff 0%, #60abf8 44%, #4096ee 100%);
+    background: -webkit-linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%);
+    background: linear-gradient(to bottom, #7abcff 0%,#60abf8 44%,#4096ee 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7abcff', endColorstr='#4096ee',GradientType=0 );
+    */
+    background-image: url('../images/womanreadingbook.jpg');
+    background-size: cover;
+    height: 350px;
+    margin-bottom: 20px;
+}
+.hero h1 {
+    color: white;
+    font-size: 1.5em;
+    margin: 0;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: 200;
+}
+
+.hero span {
+    color: white;
+    font-size: 0.8em;
+    line-height: 1.6em;
+    display: block;
+    padding-bottom: 10px;
+}
+
+.hero .hero-content {
+    top: 50px;
+    margin: 0px auto;
+    width: 350px;
+    position: relative;
+}
+
+.hero .hero-content .text-area {
+    background: rgba(72, 126, 160,0.5);
+    padding: 15px 15px 0 15px;
+}
+
+.hero .hero-content .button-area {
+    background: rgba(155, 155, 155,0.5);
+    overflow: hidden;
+    height: 160px;
+}
+
+.hero .hero-content .button-area a.button {
+    margin: 10px auto;
+    width: 90%;
+    display: block;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.hero .hero-content .button-area a.button.button-read-more {
+    background-color: cornflowerblue;
+    color: white;
+}
+
+.hero .hero-content .button-area a.button.button-continue {
+    background-color: limegreen;
+    color: white;
+}
+
+.hero .logo {
+    position: absolute;
+    display: none;
+    top: 10px;
+}
+
+.content-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.content-container.page {
+    display: none;
+}
+.content-container.page.active {
+    display: block;
+}
+
+.content-container .column {
+    float: left;
+}
+
+.content-container .column.two-thirds {
+    width: 66%;
+}
+
+
+
+.content-container .column .column-content {
+    margin: 10px;
+    line-height: 1.5em;
+
+}
+
+.content-container .column.one-third {
+    width: 34%;
+    background-color: dodgerblue;
+}
+
+.content-container .column.one-third * {
+    color: white;
+
+}
+
+footer {
+    margin-top: 10px;
+    padding-top: 10px;
+    width: 100%;
+    border-top: 1px solid #e5e5e5;
+}
+
+footer * {
+    font-size: 0.8em;
+}
+footer .column {
+
+    float: left;
+    width: 30%;
+    border-right: 1px solid #e5e5e5;
+}
+
+footer .column:last-child {
+    border-right: none;
+}
+
+footer .column .footer-column-content {
+    padding: 10px;
+}
+
+.startpage-content {
+    margin: 25px;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.startpage-content .fa {
+    font-size: 2em;
+}
+
+.startpage-content h2 {
+    text-align: left;
+    font-size: 0.75em;
+}
+
+@media (max-width: 600px) {
+    .content-container .column.one-third  {
+        width: 100%;
+    }
+    .content-container .column.two-thirds {
+        width: 100%;
+    }
+
+    footer .column {
+        width: 100%;
+        border-right: 0;
+    }
+
+    header img {
+        display: none;
+        float: left;
+        width: 125px;
+        position: relative;
+
+    }
+
+}
