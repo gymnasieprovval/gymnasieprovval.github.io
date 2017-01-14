@@ -257,7 +257,7 @@ footer .column .footer-column-content {
     font-size: 0.75em;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
     .content-container .column.one-third  {
         width: 100%;
     }
