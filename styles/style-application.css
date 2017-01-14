@@ -3,3 +3,288 @@
     background-color: rgba(155, 155, 155,0.5);
     padding: 10px;
 }
+
+.one-program {
+     margin: 5px 5px;
+    padding: 10px;
+    background-color: transparent;
+    border-radius: 10px;
+    transition: background-color 0.5s;
+    overflow: hidden;
+ }
+
+.one-program .program-content {
+    width: 75%;
+    float: left;
+}
+
+.one-program .program-selector {
+    width: 25%;
+    float: left;
+}
+
+.one-program .program-selector a.select-program {
+    width: 90%;
+    margin: 10px auto;
+    height: 50px;
+    display: block;
+    background-color: cornflowerblue;
+    color: white;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.one-program.selected .program-selector a.select-program {
+    background-color: limegreen;
+}
+
+.one-program .program-selector a.select-program:hover {
+    text-decoration: none;
+}
+
+.one-program:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.one-program.selected {
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+.one-program div.name {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+}
+
+.one-program .program-selector a.select-program:before {
+    font-family: FontAwesome;
+    content: "\f096";
+    margin-right: 10px;
+}
+
+.one-program.selected .program-selector a.select-program:before {
+    font-family: FontAwesome;
+    content: "\f046";
+    margin-right: 10px;
+}
+
+.one-program div.description {
+    font-family: 'Roboto thin', sans-serif;
+    font-weight: 200;
+}
+
+a.application-step-button {
+    margin: 10px auto;
+    height: 50px;
+    display: block;
+    background-color: grey;
+    color: white;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background-color 0.25s;
+    font-weight: 400;
+}
+
+a.application-step-button:after {
+    font-family: FontAwesome;
+    content: "\f061";
+    margin-left: 10px;
+}
+
+a.application-step-button.active {
+    background-color: limegreen;
+}
+
+a.application-step-button.active:hover {
+    background-color: darkgreen;
+}
+
+a.application-step-button.active:hover {
+    background-color: darkgreen;
+}
+
+div.step-error-message {
+    max-height: 100px;
+    transition: max-height 1s;
+    overflow: hidden;
+    text-align: center;
+    color: red;
+}
+
+div.step-error-message:before {
+    font-family: FontAwesome;
+    content: "\f071";
+    margin-right: 10px;
+    color: red;
+}
+
+div.step-error-message.hidden {
+    max-height: 0;
+}
+
+div.application-step {
+    display: none;
+}
+
+div.application-step.active {
+    display: block;
+}
+
+div.application-step label.label-merit-score {
+display: block;
+    text-align: center;
+}
+
+div.application-step div.merit-score-wrapper {
+    text-align: center;
+    background-color: transparent;
+    border-radius: 10px;
+    width: 155px;
+    margin: 0 auto;
+    padding: 10px;
+    transition: background-color 0.25s;
+}
+
+div.application-step div.merit-score-wrapper.active {
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+div.application-step input#input-merit-score {
+    height: 45px;
+    width: 150px;
+    font-size: 40px;
+    text-align: center;
+}
+
+a.application-back-button {
+    margin: 10px auto;
+    height: 50px;
+    display: block;
+    color: black;
+    line-height: 50px;
+    text-align: left;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+a.application-back-button:hover {
+    text-decoration: underline;
+}
+
+a.application-back-button:before {
+    font-family: FontAwesome;
+    content: "\f100";
+    margin-right: 5px;
+    display: inline-block;
+}
+
+div.application-sidebar.column .column-content {
+    border-radius: 20px;
+    background-color: dodgerblue;
+    color: white;
+    padding: 10px;
+}
+
+div.application-sidebar.column .column-content .subheading {
+    font-size: 0.6em;
+    font-weight: 800;
+    font-family: 'Roboto bold', sans-serif;
+    text-transform: uppercase;
+}
+
+div.application-sidebar.column .column-content ul.selections-summary{
+    margin-bottom: 10px;
+    margin-top: 0;
+    list-style: none;
+    padding: 0;
+}
+
+div.application-sidebar.column .column-content ul.selections-summary li{
+    font-size: 0.6em;
+    font-weight: 200;
+    font-family: 'Roboto thin', sans-serif;
+    line-height: 1.5em;
+    margin-bottom: 5px;
+}
+
+div.application-sidebar.column .column-content ul.selections-summary li.value:before{
+    font-family: FontAwesome;
+    content: "\f105";
+    margin-right: 5px;
+    display: inline-block;
+}
+
+div#application-result div.celebratory-icon{
+    height: 200px;
+    text-align: center;
+    line-height: 200px;
+}
+div#application-result div.celebratory-icon:before {
+    font-family: FontAwesome;
+    margin-right: 5px;
+    display: inline-block;
+    font-size: 200px;
+    text-shadow: 1px 1px 1px #000;
+}
+
+div#application-result div.celebratory-icon.hidden {
+    display: none;
+}
+
+div#application-result div.celebratory-icon.awesome:before {
+    content: "\f164";
+    color: limegreen;
+}
+
+div#application-result div.celebratory-icon.good:before {
+    content: "\f05d";
+    color: darkseagreen;
+}
+
+div#application-result div.celebratory-icon.ok:before {
+    content: "\f24e";
+    color: yellow;
+}
+
+div#application-result div.result-stats table {
+    width: 100%;
+    background-color: #f5f5f5;
+    table-layout: fixed;
+
+}
+
+div#application-result div.result-stats table td{
+    width: 33%;
+    display: inline-block;
+    vertical-align: bottom;
+    background-color: red;
+    text-align: center;
+    color: white;
+    font-size: 1.5em;
+    font-family: 'Roboto bold', sans-serif;
+}
+
+div#application-result div.result-stats table td.your-points{
+    background-color: cornflowerblue;
+}
+
+div#application-result div.result-stats table td.minimum-points{
+    background-color: lightgreen;
+}
+
+div#application-result div.result-stats table td.median-points{
+    background-color: orange;
+}
+
+div#application-result div.result-stats table td span.points-caption {
+    display: block;
+    font-size: 0.55em;
+    font-family: 'Roboto thin', sans-serif;
+    font-weight: 200;
+}
+
+

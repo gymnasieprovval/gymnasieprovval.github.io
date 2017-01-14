@@ -209,11 +209,10 @@ header span {
 
 .content-container .column.one-third {
     width: 34%;
-    background-color: dodgerblue;
+    /*background-color: dodgerblue;*/
 }
 
 .content-container .column.one-third * {
-    color: white;
 
 }
 
