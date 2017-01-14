@@ -94,6 +94,7 @@ header span {
     background-size: cover;
     height: 350px;
     margin-bottom: 20px;
+    transition: height 0.5s;
 }
 .hero h1 {
     color: white;
@@ -140,6 +141,8 @@ header span {
     border-radius: 5px;
     cursor: pointer;
     text-decoration: none;
+    -webkit-transition: background-color 0.5s; /* Safari */
+    transition: background-color 0.5s, transform 0.5s;
 }
 
 .hero .hero-content .button-area a.button.button-read-more {
@@ -152,10 +155,26 @@ header span {
     color: white;
 }
 
+.hero .hero-content .button-area a.button.button-read-more:hover {
+    background-color: darkblue;
+    color: white;
+    transform: scale(1.05);
+}
+
+.hero .hero-content .button-area a.button.button-continue:hover {
+    background-color: darkgreen;
+    color: white;
+    transform: scale(1.05);
+}
+
 .hero .logo {
     position: absolute;
     display: none;
     top: 10px;
+}
+
+.hero.hidden {
+    height: 0;
 }
 
 .content-container {
@@ -165,10 +184,11 @@ header span {
 }
 
 .content-container.page {
-    display: none;
+    opacity: 0;
+    transition: opacity 0.25s;
 }
 .content-container.page.active {
-    display: block;
+    opacity: 1;
 }
 
 .content-container .column {

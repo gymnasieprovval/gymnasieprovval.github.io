@@ -3,31 +3,29 @@ $(document).ready(function(){
 })
 
 function registerNavigationEvents(){
-    $('nav ul li a').click(function() {
+    $('.nav').click(function() {
         var relatedPage = $(this).data('page-link');
 
         navigateToPage(relatedPage);
-    });
-
-
-    $('a.button-read-more').click(function() {
-        navigateToPage('program');
-        return false;
-    });
-
-    $('a.button-continue').click(function() {
-        navigateToPage('application');
     });
 }
 
 function navigateToPage(pageKey){
     if(pageKey == 'startpage'){
-        $('.hero').show();
+        setTimeout(function() {
+            $('.hero-content').show();
+        }, 250);
+        $('.hero').removeClass('hidden');
+
     }else {
-        $('.hero').hide();
+        $('.hero-content').hide();
+        $('.hero').addClass('hidden');
     }
     $('.content-container.page').removeClass('active');
-    $('[data-page="' + pageKey + '"]').addClass('active');
+    setTimeout(function(){
+        $('.content-container.page').hide();
+        $('[data-page="' + pageKey + '"]').show().addClass('active');
+    }, 250);
 
     $('nav ul li a').removeClass('active');
     $('nav ul li a[data-page-link="' + pageKey + '"]').addClass('active');
