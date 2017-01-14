@@ -143,6 +143,7 @@ function registerStep2ApplicationEvents(){
         $('#application-step3').show();
 
         updateSelections();
+        $('html, body').animate({ scrollTop: 0 }, 'fast');
 
         return false;
     });
@@ -176,7 +177,9 @@ function registerStep3ApplicationEvents(){
             $('#application-result').show();
             Number(meritScore = $('#input-merit-score').val());
             updateSelections();
+            $('html, body').animate({ scrollTop: 0 }, 'fast');
             calculateResults();
+
         }else {
             $('#application-step3-failed').removeClass('hidden');
         }
@@ -194,8 +197,9 @@ function enableBackButtons() {
         if(currentStep && currentStep > 1){
             $('.application-step').hide();
             $('.application-step[data-step="' + (currentStep-1) + '"]').show();
+            $('html, body').animate({ scrollTop: 0 }, 'fast');
         }
-
+        
         return false;
     });
 }
