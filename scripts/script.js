@@ -265,7 +265,7 @@ function drawAnimationFrame() {
 }
 
 function calculateResults(){
-    var celebrationClass = "hidden";
+    var celebrationClass = "other";
 
     var goodScore = (selectedProgramStep1.medianScore + selectedProgramStep1.minimumScore) / 2;
     if(meritScore > selectedProgramStep1.medianScore){
@@ -277,6 +277,8 @@ function calculateResults(){
     }
 
     $('.result .celebratory-icon').removeClass("hidden").removeClass("awesome").removeClass("good").removeClass("ok").addClass(celebrationClass);
+    $('.result-text').hide();
+    $('.result-text.' + celebrationClass).show();
 
     $('.bar.your-points').height(meritScore + "px");
     $('.bar.your-points span.points').text(meritScore);
