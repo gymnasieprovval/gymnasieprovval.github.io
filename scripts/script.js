@@ -1,6 +1,7 @@
 var selectedProgramStep1;
 var selectedProgramsStep2 = [];
 var meritScore;
+var maxMeritScore = 340;
 
 var calculationCanvas;
 var canvasContext;
@@ -12,7 +13,7 @@ $(document).ready(function(){
     registerNavigationEvents();
     var firstPage = window.location.hash;
 
-    if(firstPage) {
+    if(firstPage && !firstPage == 'start') {
         navigateToPage(firstPage.replace('#', ''));
     }
 
@@ -28,7 +29,7 @@ function registerNavigationEvents(){
 }
 
 function navigateToPage(pageKey){
-    if(pageKey == 'startpage'){
+    if(pageKey == 'start'){
         setTimeout(function() {
             $('.hero-content').show();
         }, 250);
@@ -168,7 +169,7 @@ function registerStep3ApplicationEvents(){
     $( "#input-merit-score" ).keyup(function() {
         var meritScore = $(this).val();
 
-        if(meritScore.length < 1 || isNaN(meritScore) || meritScore > 350){
+        if(meritScore.length < 1 || isNaN(meritScore) || meritScore > maxMeritScore){
             $('a#application-step3-done').removeClass('active');
         }else{
             $('a#application-step3-done').addClass('active');
@@ -280,10 +281,15 @@ function calculateResults(){
     $('.result-text').hide();
     $('.result-text.' + celebrationClass).show();
 
-    $('.bar.your-points').height(meritScore + "px");
+
+    var meritPercentage = (meritScore / maxMeritScore) * 100;
+    var minMeritPercentage = (selectedProgramStep1.minimumScore / maxMeritScore) * 100;
+    var medianMeritPercentage = (selectedProgramStep1.medianScore / maxMeritScore) * 100;
+
+    $('.bar.your-points').height((meritPercentage * 3) + "px");
     $('.bar.your-points span.points').text(meritScore);
-    $('.bar.minimum-points').height(selectedProgramStep1.minimumScore + "px");
+    $('.bar.minimum-points').height((minMeritPercentage * 3) + "px");
     $('.bar.minimum-points span.points').text(selectedProgramStep1.minimumScore);
-    $('.bar.median-points').height(selectedProgramStep1.medianScore + "px");
+    $('.bar.median-points').height((medianMeritPercentage * 3) + "px");
     $('.bar.median-points span.points').text(selectedProgramStep1.medianScore);
 }

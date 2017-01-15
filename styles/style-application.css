@@ -278,6 +278,8 @@ div#application-result div.result-stats table {
     background-color: #f5f5f5;
     table-layout: fixed;
     border-spacing: 0;
+    height: 300px;
+    vertical-align: bottom;
 
 }
 
@@ -290,6 +292,8 @@ div#application-result div.result-stats table td{
     color: white;
     font-size: 1.5em;
     font-family: 'Roboto bold', sans-serif;
+    padding: 0;
+    vertical-align: bottom;
 }
 
 div#application-result div.result-stats table td.your-points{

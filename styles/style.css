@@ -218,6 +218,72 @@ header span {
     /*background-color: dodgerblue;*/
 }
 
+.content-container .column.full {
+    width: 100%;
+    overflow: hidden;
+    margin: 25px 0;
+    /*background-color: dodgerblue;*/
+}
+
+.content-container .column.full .feature {
+    width: 33%;
+    float: left;
+    /*background-color: dodgerblue;*/
+}
+
+.content-container .column.full .feature .feature-icon{
+
+    text-align: center;
+    color: lightskyblue;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.content-container .column.full .feature .feature-icon.question:after {
+    font-family: FontAwesome;
+    content: "\f29c";
+    font-size: 100px;
+    line-height: 100px;
+}
+
+.content-container .column.full .feature .feature-icon.readmore:after {
+    font-family: FontAwesome;
+    content: "\f02d";
+    font-size: 100px;
+    line-height: 100px;
+}
+
+.content-container .column.full .feature .feature-icon.application:after {
+    font-family: FontAwesome;
+    content: "\f003";
+    font-size: 100px;
+    line-height: 100px;
+}
+
+.content-container .column.full .feature .feature-text{
+    padding: 10px;
+    text-align: center;
+}
+
+.content-container .column.full .feature .feature-text h2{
+    margin: 0;
+    font-family: 'Roboto thin', sans-serif;
+    font-weight: 200;
+}
+
+.content-container .column.full .feature .feature-text p{
+    margin-top: 10px;
+    font-family: 'Roboto thin', sans-serif;
+    font-weight: 200;
+    line-height: 1.5em;
+}
+
+.content-container .column.full .feature .feature-icon{
+    font-size: 50px;
+    text-align: center;
+    color: lightskyblue;
+}
+
 .content-container .column.one-third * {
 
 }
@@ -280,6 +346,11 @@ footer .column .footer-column-content {
         float: left;
         width: 125px;
         position: relative;
+
+    }
+
+    .content-container .column.full .feature {
+        width: 100%;
 
     }
 
