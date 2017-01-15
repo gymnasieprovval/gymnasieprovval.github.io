@@ -349,6 +349,10 @@ footer .column .footer-column-content {
 
     }
 
+    .content-container .column.full {
+        margin: 10px 0;
+    }
+
     .content-container .column.full .feature {
         width: 100%;
 
