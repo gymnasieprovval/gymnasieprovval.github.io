@@ -23,8 +23,13 @@ $(document).ready(function(){
 
 function loadReadMore(){
     $( "#readmore-result" ).load( "content/readmore.html", function() {
-        alert( "Load was performed." );
+        console.log( "Load was performed." );
+        $('.readmore-program h2').click(function(){
+            $(this).parents('.readmore-program').toggleClass('active');
+        });
     });
+
+
 };
 
 function registerNavigationEvents(){

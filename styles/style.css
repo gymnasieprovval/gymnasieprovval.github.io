@@ -330,6 +330,48 @@ footer .column .footer-column-content {
     font-size: 0.75em;
 }
 
+.readmore-head-image {
+    width: 100%;
+    background-image: url('../images/meeting.jpg');
+    background-size: cover;
+    height: 250px;
+    margin-bottom: 20px;
+}
+.readmore-program {
+    margin-bottom: 2px;
+}
+
+.readmore-program h2 {
+    background-color: dodgerblue;
+    color: white;
+    padding: 10px;
+    margin: 0;
+    cursor: pointer;
+}
+
+.readmore-program h2:before {
+    font-family: FontAwesome;
+    content: "\f0da";
+    margin-right: 10px;
+}
+
+.readmore-program.active h2:before {
+    content: "\f0d7";
+}
+
+.readmore-program .readmore-content {
+     max-height: 0;
+     height: 0;
+     overflow: hidden;
+     transition: max-height 2s;
+ }
+
+.readmore-program.active .readmore-content {
+    height: auto;
+    max-height: 2000px;
+}
+
+
 @media (max-width: 800px) {
     .content-container .column.one-third  {
         width: 100%;
