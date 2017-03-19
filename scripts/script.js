@@ -13,12 +13,19 @@ $(document).ready(function(){
     registerNavigationEvents();
     var firstPage = window.location.hash;
 
-    if(firstPage && !firstPage == 'start') {
+    if(firstPage && firstPage !== 'start') {
         navigateToPage(firstPage.replace('#', ''));
     }
 
     loadPrograms();
-})
+    loadReadMore();
+});
+
+function loadReadMore(){
+    $( "#readmore-result" ).load( "content/readmore.html", function() {
+        alert( "Load was performed." );
+    });
+};
 
 function registerNavigationEvents(){
     $('.nav').click(function() {

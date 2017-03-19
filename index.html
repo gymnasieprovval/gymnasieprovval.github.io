@@ -29,8 +29,8 @@
         <div class="hero-content">
             <div class="text-area">
             <h1>Provval till Gymnasiet</h1>
-            <span>Här kan du göra en provansökan till de gymnasieprogram du skulle kunna tänka dig att gå. Du kommer
-            sedan att få ett provbesked baserad på hur antagningen sett ut under förra ansökningsperioden.</span>
+            <span>Här kan du göra en provansökan till de gymnasieprogram du skulle kunna tänka dig att gå. Du kommer sedan att
+                få ett provbesked baserad på hur antagningen sett ut under förra ansökningsperioden.</span>
             </div>
             <div class="button-area">
                 <a class="nav button button-continue" data-page-link="application" href="#application">Gör ditt val!</a>
@@ -49,21 +49,21 @@
                 <div class="feature-icon question"></div>
                 <div class="feature-text">
                     <h2>Vad är det här?</h2>
-                    <p>Den här sidan är tänkt att ge en snabb indikation på hur dina meritpoäng kan ta dig till det gymnasieprogram du vill läsa.</p>
+                    <p>Gymnasieprovval.se finns för att underlätta gymnasievalet för dig som är årskurs 9-elev i Haninge. Här kan du jämföra dina meritpoäng med vad som krävdes förra året för att komma in på de olika nationella programmen i kommunen. Vi tror att det gör det lite enklare att komma igång med funderingarna kring vilket gymnasieprogram som passar dig bäst!</p>
                 </div>
             </div>
             <div class="feature">
                 <div class="feature-icon readmore"></div>
                 <div class="feature-text">
                     <h2>Läs om programmen</h2>
-                    <p>Har du inte riktigt bestämt dig än? Gå in på sidan om de olika programmen och titta på vilka möjligheter som finns!</p>
+                    <p>Känns det som att du inte är helt säker på vad de olika nationella programmen innebär? Då kan du läsa mer här!</p>
                 </div>
             </div>
             <div class="feature">
                 <div class="feature-icon application"></div>
                 <div class="feature-text">
                     <h2>Gör en provansökan</h2>
-                    <p>Gå till provansökan för att se hur det skulle kunna gå om du sökte in till ett gymnasieprogram idag.</p>
+                    <p>Klicka på "provansökan" för att komma igång med din gymnasieprovval!</p>
                 </div>
             </div>
         </div>
@@ -78,6 +78,23 @@
     <div class="column two-thirds">
 
             <h2>Gymnasieprogram</h2>
+
+        <p>Hej!</p>
+
+        <p>Här följer information, och ett antal bra länkar, som är bra att ha koll på inför gymnasievalet och provvalet.</p>
+
+        <p>Lycka till!</p>
+
+
+        <p>På behörighetsvisaren hittar du information om vad de olika programmen leder till att du kan studera på universitetet:
+            <a href="http://www.utbildningsinfo.se/gymnasieskola/2.323/behorighetsvisaren-1.3591" alt="Behörighetsvisaren">Gå till behörighetsvisaren</a></p>
+
+
+        <p>En väldigt bra sida att hitta information om gymnasieutbildningar och gymnasievalet är <a href="http://www.utbildningsinfo.se" alt="utbildningsinfo">utbildningsinfo</a>.</p>
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/gy75BsZl-PU" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div id="readmore-result">
 
     </div>
     <div class="column one-third">
@@ -145,7 +162,9 @@
         <!-- Steg 3 -->
         <div id="application-result" class="application-step" data-step="4">
             <div class="column-content">
-                <canvas id="calculation-canvas"></canvas>
+                <!--div id="calculation-loading-wrapper">
+                    <div id="calculation-loading"></div>
+                </div-->
                 <div class="result-wrapper">
                     <h2>Såhär ser det ut på dina program</h2>
                     <div class="result">
@@ -155,7 +174,7 @@
                                 <div class="result-text ok">Du borde ha en bra chans att komma in på ditt förstahandsval, men se till att gå igenom dina andrahandsval också!</div>
                                 <div class="result-text good">Baserat på förra årets antagningspoäng så ser det lovande ut, du ligger en bit över minimiantagningspoängen.</div>
                                 <div class="result-text awesome">Förra antagningsperioden hade du kommit in på ditt program med råge! Fortsätt så här så ser det lovande ut!</div>
-                                <div class="result-text other">Det ser ut som att du skulle få det tufft med ditt förstahandsval i dagsläget, men kämpa på och se till att prata med din studie- och yrkesvägledare!</div>
+                                <div class="result-text other">Dina meritpoäng hade tyvärr inte räckt hela vägen om du hade sökt förra ansökningsperioden. Besök din studie- och yrkesvägledare och diskutera med dina lärare om vad du behöver göra för att få högre betyg! Det är långt ifrån försent att komma igång, så fortsätt kämpa!</div>
 
                             </div>
                             </div>
@@ -248,7 +267,15 @@
             "minimumScore": 112.5,
         "medianScore": 201.3
     },
-    ]
+    ];
+
+    var readMore = [
+        { "menuName": "",
+            "menuKey": "",
+            "heading": "",
+            "text": ""
+        },
+    ];
 </script>
 </body>
 
