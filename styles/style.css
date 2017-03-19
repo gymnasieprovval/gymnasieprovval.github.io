@@ -192,9 +192,11 @@ header span {
 .content-container.page {
     opacity: 0;
     transition: opacity 0.25s;
+    display: none;
 }
 .content-container.page.active {
     opacity: 1;
+    display: block;
 }
 
 .content-container .column {
@@ -355,7 +357,7 @@ footer .column .footer-column-content {
 
     .content-container .column.full .feature {
         width: 100%;
-
+        margin-bottom: 50px;
     }
 
 }

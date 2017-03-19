@@ -283,9 +283,20 @@ div#application-result div.result-stats table {
 
 }
 
+div#application-result div.result-stats table tr {
+    width: 100%;
+    background-color: #f5f5f5;
+    table-layout: fixed;
+    border-spacing: 0;
+    height: 300px;
+    vertical-align: bottom;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
 div#application-result div.result-stats table td{
     width: 33%;
-    display: inline-block;
     vertical-align: bottom;
     background-color: red;
     text-align: center;
