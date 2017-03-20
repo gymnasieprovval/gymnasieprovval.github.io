@@ -1,5 +1,6 @@
 * {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto thin', sans-serif;
+    font-weight: 200;
 
 }
 
@@ -220,6 +221,65 @@ header span {
     /*background-color: dodgerblue;*/
 }
 
+.content-wrapper {
+    margin: 10px;
+    /*background-color: dodgerblue;*/
+}
+
+.content-wrapper .video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+}
+.content-wrapper .video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.link-title {
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.external-program-link {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: underline;
+    color: black;
+}
+
+.external-link-icon {
+
+    text-decoration: none;
+}
+
+.external-link-icon:after {
+    font-family: FontAwesome;
+    content: "\f08e";
+    padding-left: 5px;
+    text-decoration: none;
+}
+
+.content-wrapper.blue {
+    padding: 10px;
+    color: white;
+    background-color: lightskyblue;
+    border-radius: 20px;
+
+}
+
+.content-wrapper.blue p {
+    font-family: 'Roboto thin', sans-serif;
+    font-weight: 200;
+}
+
 .content-container .column.full {
     width: 100%;
     overflow: hidden;
@@ -364,6 +424,7 @@ footer .column .footer-column-content {
      height: 0;
      overflow: hidden;
      transition: max-height 2s;
+     padding: 0 10px;
  }
 
 .readmore-program.active .readmore-content {
