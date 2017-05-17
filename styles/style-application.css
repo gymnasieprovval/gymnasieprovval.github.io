@@ -4,6 +4,11 @@
     padding: 10px;
 }
 
+.application-form h2 {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
 .one-program {
      margin: 5px 5px;
     padding: 10px;
@@ -204,7 +209,7 @@ div.application-sidebar.column .column-content ul.selections-summary{
 }
 
 div.application-sidebar.column .column-content ul.selections-summary li{
-    font-size: 0.6em;
+    font-size: 0.8em;
     font-weight: 200;
     font-family: 'Roboto thin', sans-serif;
     line-height: 1.5em;
@@ -218,39 +223,56 @@ div.application-sidebar.column .column-content ul.selections-summary li.value:be
     display: inline-block;
 }
 
+
 div#application-result div.result-overview {
-    width: 100%;
     overflow: hidden;
     vertical-align: middle;
+    overflow: hidden;
 }
 
 div#application-result div.result-text-wrapper {
-    width: 50%;
-    float: left;
-    height: 200px;
+    width: 60%;
+    background-color: lemonchiffon;
+    border-radius: 10px;
+    padding: 10px 20px;
 }
 
+h3#first-choice {
+    font-weight: 400;
+}
+
+
+div.result {
+    background-color: #f5f5f5;
+    border-radius: 20px;
+    padding: 10px;
+}
 div#application-result div.result-text {
     width: 100%;
     position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    font-weight: 200;
+    font-weight: 400;
     font-family: 'Roboto thin', sans-serif;
 }
 
+div#application-result div.overview-message-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+    align-items: center;
+}
+
 div#application-result div.celebratory-icon{
-    height: 250px;
     text-align: center;
-    line-height: 200px;
-    width:50%;
+    line-height: 100px;
+    width:20%;
     float: left;
 }
 div#application-result div.celebratory-icon:before {
     font-family: FontAwesome;
     margin-right: 5px;
     display: inline-block;
-    font-size: 200px;
+    font-size:100px;
     text-shadow: 1px 1px 1px #000;
 }
 
@@ -273,13 +295,41 @@ div#application-result div.celebratory-icon.ok:before {
     color: yellow;
 }
 
-div#application-result div.result-stats table {
+div.result-stats {
     width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+div.result-table-wrapper {
+    position: relative;
+    width: 75%;
+    margin-top: 10px;
+}
+
+div.result-table-wrapper .max-score {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 0.5em;
+    color: lightgray;
+}
+
+div.result-table-wrapper .min-score {
+    position: absolute;
+    bottom: 0;
+    font-size: 0.5em;
+    color: transparent;
+}
+
+div#application-result div.result-stats table {
+    width: 75%;
+    margin-left: 25%;
     background-color: #f5f5f5;
     table-layout: fixed;
     border-spacing: 0;
-    height: 300px;
     vertical-align: bottom;
+    border-top: 1px solid lightgray;
 
 }
 
@@ -296,7 +346,7 @@ div#application-result div.result-stats table tr {
 }
 
 div#application-result div.result-stats table td{
-    width: 33%;
+    width: 50%;
     vertical-align: bottom;
     background-color: red;
     text-align: center;
@@ -304,7 +354,18 @@ div#application-result div.result-stats table td{
     font-size: 1.5em;
     font-family: 'Roboto bold', sans-serif;
     padding: 0;
-    vertical-align: bottom;
+}
+
+div#application-result div.result-stats div.line.your-points {
+    position: absolute;
+    border-top: 2px solid dodgerblue;
+    width: 100%;
+
+}
+
+div#application-result div.result-stats div.line.your-points .caption{
+    position: absolute;
+    top: -25px;
 }
 
 div#application-result div.result-stats table td.your-points{
@@ -324,6 +385,69 @@ div#application-result div.result-stats table td span.points-caption {
     font-size: 0.5em;
     font-family: 'Roboto thin', sans-serif;
     font-weight: 200;
+}
+
+div#application-result div.result-stats table tr:last-of-type {
+    width: 100%;
+    table-layout: fixed;
+    background-color: transparent;
+    border-spacing: 0;
+    height: auto;
+    vertical-align: bottom;
+    display: flex;
+    justify-content: space-between;
+}
+
+div#application-result div.result-stats table tr:last-of-type td{
+    width: 50%;
+    vertical-align: bottom;
+    color: black;
+    text-align: center;
+    font-size: 12px;
+    font-family: 'Roboto thin', sans-serif;
+    padding: 0;
+    background-color: transparent;
+}
+
+div#application-result div.result-stats table tr:last-of-type td span.points {
+    display: block;
+    font-size: 2em;
+}
+
+div.secondary-result {
+    width: 100%;
+    margin-top: 10px;
+}
+
+div.secondary-result div.one-secondary-result {
+    border-radius: 10px;
+    width: 100%;
+    background-color: #f5f5f5;
+    margin-bottom: 5px;
+}
+
+div.secondary-result div.one-secondary-result div.secondary-result-content-wrapper {
+    padding: 10px;
+}
+
+div.one-secondary-result h3 {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+div.one-secondary-result span.your-score {
+    font-weight: 600;
+    color: dodgerblue;
+}
+
+div.one-secondary-result span.minimum-score {
+    font-weight: 600;
+    color: green;
+}
+
+div.one-secondary-result span.median-score {
+    font-weight: 600;
+    color: orange;
 }
 
 #calculation-loading-wrapper {
@@ -365,6 +489,23 @@ div#application-result div.result-stats table td span.points-caption {
         width: 100%;
     }
 
+
+
+
+
+}
+
+@media (max-width: 550px) {
+    div#application-result div.overview-message-wrapper
+    {
+        display: block;
+    }
+
+    div#application-result div.result-text-wrapper {
+        text-align: center;
+        padding: 10px 0;
+    }
+
     div#application-result div.result-text-wrapper {
         width: 100%;
         height: 250%;
@@ -373,5 +514,4 @@ div#application-result div.result-stats table td span.points-caption {
     div#application-result div.celebratory-icon {
         width: 100%;
     }
-
 }

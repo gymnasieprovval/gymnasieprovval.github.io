@@ -19,6 +19,7 @@ $(document).ready(function(){
 
     loadPrograms();
     loadReadMore();
+
 });
 
 function loadReadMore(){
@@ -59,6 +60,7 @@ function navigateToPage(pageKey){
 
     $('nav ul li a').removeClass('active');
     $('nav ul li a[data-page-link="' + pageKey + '"]').addClass('active');
+
 }
 
 function loadPrograms(){
@@ -83,6 +85,8 @@ function loadPrograms(){
     registerStep2ApplicationEvents();
     registerStep3ApplicationEvents();
     enableBackButtons();
+
+
 }
 
 function buildApplicationProgram(program, elementToAppend){
@@ -98,6 +102,7 @@ function buildApplicationProgram(program, elementToAppend){
     programElement.data('program-object', program);
 
     elementToAppend.append(programElement);
+    
 }
 
 function setSelectedItemStep1(selectedProgram){
@@ -289,6 +294,7 @@ function calculateResults(){
         celebrationClass = "ok";
     }
 
+    $('h3#first-choice').text(selectedProgramStep1.name);
     $('.result .celebratory-icon').removeClass("hidden").removeClass("awesome").removeClass("good").removeClass("ok").addClass(celebrationClass);
     $('.result-text').hide();
     $('.result-text.' + celebrationClass).show();
@@ -298,10 +304,52 @@ function calculateResults(){
     var minMeritPercentage = (selectedProgramStep1.minimumScore / maxMeritScore) * 100;
     var medianMeritPercentage = (selectedProgramStep1.medianScore / maxMeritScore) * 100;
 
+    var minText = selectedProgramStep1.minimumScore;
+
+    if(selectedProgramStep1.minimumScore <= 0){
+        minText = "Alla antagna";
+    }
+
     $('.bar.your-points').height((meritPercentage * 3) + "px");
     $('.bar.your-points span.points').text(meritScore);
     $('.bar.minimum-points').height((minMeritPercentage * 3) + "px");
-    $('.bar.minimum-points span.points').text(selectedProgramStep1.minimumScore);
     $('.bar.median-points').height((medianMeritPercentage * 3) + "px");
-    $('.bar.median-points span.points').text(selectedProgramStep1.medianScore);
+    $('.amount.minimum-points span.points').text(minText);
+    $('.amount.median-points span.points').text(selectedProgramStep1.medianScore);
+
+    $('.line.your-points').css({ top: 300 - meritPercentage * 3  + "px" });
+    $('.line.your-points').text(meritScore);
+    $('.line.your-points').prepend('<div class="caption">Ditt meritvärde</div>');
+
+    loadSecondaryProgramResults();
+}
+
+function loadSecondaryProgramResults(){
+    $('div.secondary-result').empty();
+
+    if(selectedProgramsStep2.length < 1)
+    {
+        return;
+    }
+
+    $.each(selectedProgramsStep2, function (index, program) {
+        var minText = program.minimumScore;
+
+        if(program.minimumScore <= 0){
+            minText = "Alla antagna";
+        }
+
+        var programResult = $('<div class="one-secondary-result"/>');
+        var programWrapper = $('<div class="secondary-result-content-wrapper"/>');
+        programWrapper.append($('<h3>' + program.name + '</h3>'));
+        programWrapper.append($('<div>Ditt meritvärde: <span class="your-score">' + meritScore + '</span></div>'));
+        programWrapper.append($('<div>Förra årets antagningsgräns: <span class="minimum-score">' + minText + '</span></div>'));
+        programWrapper.append($('<div>Förra årets median: <span class="median-score">' + program.medianScore + '</span></div>'));
+
+        programResult.append(programWrapper);
+
+        $('div.secondary-result').append(programResult);
+    });
+
+
 }

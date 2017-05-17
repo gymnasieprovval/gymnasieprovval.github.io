@@ -13,7 +13,7 @@
 
 <header>
     <div class="header-content">
-        <img src="images/Haninge-logo.svg" alt="Haninge kommun" />
+        <img src="images/Haninge-logo.svg" alt="Haninge kommun" style="display: none;" />
         <nav>
             <ul>
                 <li><a href="#start" class="nav active" data-page-link="start">Startsidan</a></li>
@@ -93,9 +93,9 @@
         <div class="content-wrapper blue">
         <h2>Visste du att...</h2>
             <p>...gymnasievalet genomförs i två omgångar?</p>
-            <p>...att du alltid kan prata med din SYV om du har frågor och funderingar om dina framtidsval?</p>
-            <p>...att du kan göra ett lätt intressetest på Arbetsförmedlingens webbsida(länk)?</p>
-            <p>...att det finns över 8000 olika yrken i Sverige?</p>
+            <p>...du alltid kan prata med din SYV om du har frågor och funderingar om dina framtidsval?</p>
+            <p>...du kan göra ett lätt intressetest på <a href="https://www.arbetsformedlingen.se/For-arbetssokande/Yrke-och-framtid/Tester-och-guider/Intressetest.html" target="_blank">Arbetsförmedlingens webbsida</a>?</p>
+            <p>...det finns över 8000 olika yrken i Sverige?</p>
         </div>
     </div>
 
@@ -283,29 +283,44 @@
                     <h2>Såhär ser det ut på dina program</h2>
                     <div class="result">
                         <div class="result-overview">
-                            <div class="celebratory-icon ok"></div>
-                            <div class="result-text-wrapper">
-                                <div class="result-text ok">Du borde ha en bra chans att komma in på ditt förstahandsval, men se till att gå igenom dina andrahandsval också!</div>
-                                <div class="result-text good">Baserat på förra årets antagningspoäng så ser det lovande ut, du ligger en bit över minimiantagningspoängen.</div>
-                                <div class="result-text awesome">Förra antagningsperioden hade du kommit in på ditt program med råge! Fortsätt så här så ser det lovande ut!</div>
-                                <div class="result-text other">Dina meritpoäng hade tyvärr inte räckt hela vägen om du hade sökt förra ansökningsperioden. Besök din studie- och yrkesvägledare och diskutera med dina lärare om vad du behöver göra för att få högre betyg! Det är långt ifrån försent att komma igång, så fortsätt kämpa!</div>
+                            <h3 id="first-choice"></h3>
+                            <div class="overview-message-wrapper">
+                                <div class="celebratory-icon ok" style=""></div>
+                                <div class="result-text-wrapper">
+                                    <div class="result-text ok">Du borde ha en bra chans att komma in på ditt förstahandsval, men se till att gå igenom dina andrahandsval också!</div>
+                                    <div class="result-text good">Baserat på förra årets antagningspoäng så ser det lovande ut, du ligger en bit över minimiantagningspoängen.</div>
+                                    <div class="result-text awesome">Förra antagningsperioden hade du kommit in på ditt program med råge! Fortsätt så här så ser det lovande ut!</div>
+                                    <div class="result-text other">Dina meritpoäng hade tyvärr inte räckt hela vägen om du hade sökt förra ansökningsperioden. Besök din studie- och yrkesvägledare och diskutera med dina lärare om vad du behöver göra för att få högre betyg! Det är långt ifrån försent att komma igång, så fortsätt kämpa!</div>
 
+                                </div>
                             </div>
-                            </div>
+                        </div>
                          <div class="result-stats">
-                            <table class="vertical-bars">
-                                <tr>
-                                    <td class="bar your-points" style="height: 140px;"><span class="points"></span><span class="points-caption">Dina poäng</span></td>
-                                    <td class="bar minimum-points" style="height: 200px;"><span class="points"></span><span class="points-caption">Antagningspoäng</span></td>
-                                    <td class="bar median-points" style="height: 300px;"><span class="points"></span><span class="points-caption">Medianpoäng</span></td>
-                                </tr>
-                            </table>
 
-                    </div>
+                            <div class="result-table-wrapper">
+                                <div class="max-score">340 poäng</div>
+                                <div class="min-score">0 poäng</div>
+                                <table class="vertical-bars">
+                                    <tr>
+                                        <td class="bar minimum-points" style="height: 200px;"><span class="points"></span></td>
+                                        <td class="bar median-points" style="height: 300px;"><span class="points"></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="amount minimum-points">Förra årets antagningsgräns <span class="points"></span></td>
+                                        <td class="amount median-points">Förra årets median <span class="points"></span></td>
+                                    </tr>
+                                </table>
+                                <div class="line your-points">
+                                    <div class="caption">Din poäng</div>
+                                </div>
+                            </div>
+                        </div>
+
+                </div>
+                    <h2>Såhär ser det ut på dina andrahandsval</h2>
                     <div class="secondary-result">
 
                     </div>
-                </div>
                 <div class="disclaimer">
                     Dessa resultat är baserade på förra årets antagningspoäng på de program du valt i denna provansökan.
                 </div>
@@ -329,7 +344,7 @@
             <ul class="selections-summary" id="selected-step2">
                 <li>-</li>
             </ul>
-            <span class="subheading">Din meritpoäng</span>
+            <span class="subheading">Ditt meritvärde</span>
             <ul class="selections-summary" id="selected-step3">
                 <li>-</li>
             </ul>
@@ -341,18 +356,7 @@
 <!-- Slut på ansökan --->
 
 <footer>
-    <div class="column">
-        <div class="footer-column-content">
-        Adress 1 <br />
-        Adressrad 2<br />
-        Adressrad 3<br />
-        </div>
-    </div>
-    <div class="column">
-        <div class="footer-column-content">
-            Tel: 2042140214
-        </div>
-    </div>
+
 </footer>
 
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"
@@ -389,7 +393,7 @@
         },
         {
             "name": "Ekonomiprogrammet",
-            "description": "Riksäpplet Fredrika Bremergymnasierna",
+            "description": "Riksäpplet, Fredrika Bremergymnasierna",
             "minimumScore": 182.5,
             "medianScore": 226.2,
             "Places": 60,
@@ -445,7 +449,7 @@
         },
         {
             "name": "Handels- och administrationsprogrammet",
-            "description": "Riksäpplet Fredrika Bremergymnasierna",
+            "description": "Riksäpplet, Fredrika Bremergymnasierna",
             "minimumScore": 0,
             "medianScore": 177.5,
             "Places": 32,
