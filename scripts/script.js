@@ -95,7 +95,7 @@ function buildApplicationProgram(program, elementToAppend){
     programElement.children('.program-content').append('<div class="name">' + program.name + '</div>');
 
     programElement.children('.program-content').append('<div class="description">' + program.description + '</div>');
-    programElement.children('.program-content').append('<a href="#" class="read-more">Läs mer</a>');
+    //programElement.children('.program-content').append('<a href="#" class="read-more">Läs mer</a>');
 
     programElement.children('.program-selector').append('<a href="#" class="select-program">Välj program</a>');
 
