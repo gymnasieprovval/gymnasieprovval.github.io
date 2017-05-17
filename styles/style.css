@@ -464,3 +464,9 @@ footer .column .footer-column-content {
     }
 
 }
+
+@media (max-width: 500px){
+    header nav ul li {
+        margin-right: 15px;
+    }
+}
