@@ -1,6 +1,7 @@
 var selectedProgramStep1;
 var selectedProgramsStep2 = [];
 var meritScore;
+var failingCompulsoryGrades = false;
 var maxMeritScore = 340;
 
 var calculationCanvas;
@@ -200,6 +201,13 @@ function registerStep3ApplicationEvents(){
             $('#application-step3').hide();
             $('#application-result').show();
             Number(meritScore = $('#input-merit-score').val());
+
+            if($('#input-compulsory-grades').is(":checked")){
+                failingCompulsoryGrades = true;
+            }else{
+                failingCompulsoryGrades = false;
+            }
+
             updateSelections();
             $('html, body').animate({ scrollTop: 0 }, 'fast');
             calculateResults();
@@ -283,6 +291,23 @@ function drawAnimationFrame() {
 }
 
 function calculateResults(){
+
+    if(failingCompulsoryGrades){
+        $('.result-text').hide();
+        $('.result .celebratory-icon').removeClass("awesome").removeClass("good").removeClass("ok").addClass("other");
+        $('.result-text.compulsory-failed').show();
+        $('.compulsory-grades-text').show();
+
+        $('.result-stats').hide();
+        $('#secondary-result-heading').hide();
+        return;
+    }else{
+        $('.result-text.compulsory-failed').hide();
+        $('.compulsory-grades-text').hide();
+
+        $('#secondary-result-heading').show();
+        $('.result-stats').show();
+    }
     var celebrationClass = "other";
 
     var goodScore = (selectedProgramStep1.medianScore + selectedProgramStep1.minimumScore) / 2;
@@ -295,7 +320,7 @@ function calculateResults(){
     }
 
     $('h3#first-choice').text(selectedProgramStep1.name);
-    $('.result .celebratory-icon').removeClass("hidden").removeClass("awesome").removeClass("good").removeClass("ok").addClass(celebrationClass);
+    $('.result .celebratory-icon').removeClass("other").removeClass("awesome").removeClass("good").removeClass("ok").addClass(celebrationClass);
     $('.result-text').hide();
     $('.result-text.' + celebrationClass).show();
 

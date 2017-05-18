@@ -266,6 +266,10 @@
 
                     <input type="number" id="input-merit-score" />
                     </div>
+                    <div class="compulsory-grades">
+                        <input type="checkbox" id="input-compulsory-grades" />
+                        <label for="input-compulsory-grades">Kryssa i här om du har F i matte, svenska eller engelska</label>
+                    </div>
                 </div>
                 <a id="application-step3-done" href="#" class="application-step-button">Se ditt resultat</a>
                 <div id="application-step3-failed" class="step-error-message hidden">Du måste ange ett korrekt meritvärde!</div>
@@ -289,11 +293,25 @@
                                 <div class="result-text-wrapper">
                                     <div class="result-text ok">Du borde ha en bra chans att komma in på ditt förstahandsval, men se till att gå igenom dina andrahandsval också!</div>
                                     <div class="result-text good">Baserat på förra årets antagningspoäng så ser det lovande ut, du ligger en bit över minimiantagningspoängen.</div>
-                                    <div class="result-text awesome">Förra antagningsperioden hade du kommit in på ditt program med råge! Fortsätt så här så ser det lovande ut!</div>
+                                    <div class="result-text awesome">Förra antagningsperioden hade du kommit in på ditt program! Fortsätt såhär så ser det lovande ut!</div>
                                     <div class="result-text other">Dina meritpoäng hade tyvärr inte räckt hela vägen om du hade sökt förra ansökningsperioden. Besök din studie- och yrkesvägledare och diskutera med dina lärare om vad du behöver göra för att få högre betyg! Det är långt ifrån försent att komma igång, så fortsätt kämpa!</div>
-
+                                    <div class="result-text compulsory-failed">
+                                        Tyvärr måste du ha godkänt i alla kärnämnen för att komma in på ett nationellt gymnasieprogram. Tala med din studie- och yrkesvägledare, dina lärare och dina mentorer för att ta reda på vad du måste göra för att få godkänt!
+                                    </div>
                                 </div>
                             </div>
+                        </div>
+                        <div class="compulsory-grades-text" style="display: none;">
+                            <h2>Behörighet till yrkesprogram</h2>
+                            <p>För att ha gymnasiebehörighet till ett yrkesprogram krävs godkända betyg i svenska eller svenska som andraspråk, engelska och matematik och i minst fem andra ämnen från grundskolan.</p>
+
+                            <h2>Behörighet till högskoleförberedande program</h2>
+                            <p>För gymnasiebehörighet till ett högskoleförberedande program krävs godkända betyg i svenska eller svenska som andraspråk, engelska, matematik och i minst nio andra ämnen från grundskolan.</p>
+                            <ul>
+                                <li>För ekonomi-, humanistiska och samhällsvetenskapsprogrammet ska fyra av de ytterligare nio ämnena vara geografi, historia, samhällskunskap och religion.</li>
+                                <li>För naturvetenskaps- och teknikprogrammen ska tre av de ytterligare nio ämnena vara biologi, fysik och kemi.</li>
+                                <li>För det estetiska programmet är de nio ämnena valfria. Här kan dock även färdighetsprov förekomma.</li>
+                            </ul>
                         </div>
                          <div class="result-stats">
 
@@ -317,7 +335,7 @@
                         </div>
 
                 </div>
-                    <h2>Såhär ser det ut på dina andrahandsval</h2>
+                    <h2 id="secondary-result-heading">Såhär ser det ut på dina andrahandsval</h2>
                     <div class="secondary-result">
 
                     </div>
